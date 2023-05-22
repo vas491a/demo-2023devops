@@ -1,0 +1,6 @@
+git init
+git clone
+git add
+git status
+git puh origin main
+git commit -m "
