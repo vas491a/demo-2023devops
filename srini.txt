@@ -4,3 +4,5 @@ git add
 git status
 git puh origin main
 git commit -m "
+git merge
+git chout
