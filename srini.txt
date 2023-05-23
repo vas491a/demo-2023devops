@@ -6,3 +6,4 @@ git puh origin main
 git commit -m "
 git merge
 git chout
+git reset
