@@ -1,0 +1,15 @@
+@library("devops-demo)_
+pipel172.31.29.149ine {
+  agent any
+  
+  stages {
+    stage("naven bulid") {
+      steps {
+        sh 'maven clean packege'
+    }
+  }
+  stage('deploy to tomcat') {
+    steps {
+      tomcatDeploy('172.31.29.149','app','tomcat-dev')
+    }
+  }  
