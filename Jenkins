@@ -1,0 +1,25 @@
+@library("devops-demo")_
+pipelinstages {
+  agent any
+
+   stages {
+     stage('maven build') {
+       steps {
+         sh 'mvn clean package'
+     }
+   }
+   stage('deplot to dev tomcat') {
+     step {
+       tomcatdeploy('','app','tomcat-dev')
+     }  
+   }  
+ }  
+ post {
+   sucess {
+     archiveArifacts artifacts:'target/*.war'
+     cleanWs()
+   }
+ }
+} 
+
+
